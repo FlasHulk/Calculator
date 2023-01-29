@@ -1,0 +1,139 @@
+.calculator {
+  @include breakpoint(extra-small) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .calculator-data {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include breakpoint(extra-small) {
+      flex-direction: column-reverse;
+      align-items: start;
+    }
+
+    .calculator-data__input {
+      p {
+        display: flex;
+        align-items: center;
+        &::after {
+          content: attr(data-value);
+          display: block;
+          font-size: 24px;
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .calculator-result {
+    @include breakpoint(extra-small) {
+      display: flex;
+      gap: 10px;
+    }
+
+    li {
+      display: flex;
+      gap: 10px;
+
+      @include breakpoint(extra-small) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+      }
+
+      &.max {
+        &.backblaze {
+          .right {
+            .progress {
+              background: red;
+            }
+          }
+        }
+        &.bunny {
+          .right {
+            .progress {
+              background: blue;
+            }
+          }
+        }
+        &.scaleway {
+          .right {
+            .progress {
+              background: orange;
+            }
+          }
+        }
+        &.vultr {
+          .right {
+            .progress {
+              background: plum;
+            }
+          }
+        }
+      }
+
+      .left {
+        width: 100%;
+        max-width: 200px;
+        .param {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          @include breakpoint(extra-small) {
+            flex-direction: column;
+          }
+
+          label {
+            display: inherit;
+            align-items: inherit;
+            gap: inherit;
+          }
+        }
+      }
+
+      .right {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include breakpoint(extra-small) {
+          flex-direction: column-reverse;
+        }
+
+        .bar {
+          width: 100%;
+          max-width: 200px;
+          height: 20px;
+
+          @include breakpoint(extra-small) {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 20px !important;
+            max-width: unset;
+            height: 200px;
+          }
+          .progress {
+            height: 100%;
+            background: gray;
+            transition: .3s;
+          }
+        }
+
+        .price {
+          &::after {
+            content: attr(data-price);
+            display: block;
+            font-size: 24px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}

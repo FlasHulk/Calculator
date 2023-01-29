@@ -1,0 +1,23 @@
+@import 'fonts';
+@import 'variables';
+@import 'normalize';
+@import 'typography';
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1300px;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    flex: 0 0 auto;
+}

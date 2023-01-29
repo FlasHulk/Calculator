@@ -1,0 +1,88 @@
+<extends src="layout.html">
+    <block name="content">
+            <div class="calculator">
+                <div class="calculator-data">
+                    <div class="calculator-data__input">
+                        <p data-value="">Storage:</p>
+                        <input type="range" id="storage" step="1" min="0" max="1000">
+                    </div>
+                    <div class="calculator-data__input">
+                        <p data-value="">Transfer:</p>
+                        <input type="range" id="transfer" step="1" min="0" max="1000">
+                    </div>
+                </div>
+
+                <ul class="calculator-result">
+                    <li class="backblaze">
+                        <div class="left">
+                            <p class="name">backblaze</p>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress">
+
+                                </div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+
+                    </li>
+                    <li class="bunny">
+                        <div class="left">
+                            <p class="name">bunny</p>
+                            <div class="param">
+                                <label>
+                                    <p>HDD</p>
+                                    <input id="type-disk1" type="radio" name="type-disk" value="HDD" checked/>
+                                </label>
+                                <label >
+                                    <p>SSD</p>
+                                    <input id="type-disk2"  type="radio" name="type-disk" value="SSD" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+
+
+                    </li>
+                    <li class="scaleway">
+                        <div class="left">
+                            <p class="name">scaleway</p>
+                            <div class="param">
+                                <label>
+                                    <p>Multi</p>
+                                    <input id="type-options1" type="radio" name="type-options" value="Multi" checked/>
+                                </label>
+                                <label >
+                                    <p>Single</p>
+                                    <input id="type-options2"  type="radio" name="type-options" value="Single" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+                    </li>
+                    <li class="vultr">
+                        <div class="left">
+                            <p class="name">vultr</p>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    </block>
+</extends>
