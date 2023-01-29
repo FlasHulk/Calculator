@@ -1,79 +1,102 @@
-Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve './assets/css/main.css' in 'D:\Work\git\Calculator\resources\html':
-  Error: Can't resolve './assets/css/main.css' in 'D:\Work\git\Calculator\resources\html'
-  ModuleNotFoundError: Module not found: Error: Can't resolve './assets/css/main.css' in 'D:\Work\git\Calculator\resources\html'
-  
-  - Compilation.js:1773 
-    [Calculator]/[webpack]/lib/Compilation.js:1773:28
-  
-  - NormalModuleFactory.js:814 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:814:13
-  
-  
-  - NormalModuleFactory.js:286 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:286:22
-  
-  
-  - NormalModuleFactory.js:442 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:442:22
-  
-  - NormalModuleFactory.js:124 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:124:11
-  
-  - NormalModuleFactory.js:676 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:676:25
-  
-  - NormalModuleFactory.js:885 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:885:8
-  
-  - NormalModuleFactory.js:1005 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:1005:5
-  
-  - Module not found: Error: Can't resolve './assets/js/app.js' in 'D:\Work\git\Calculator\resources\html':
-  
-  - Error: Can't resolve './assets/js/app.js' in 'D:\Work\git\Calculator\resources\html'
-  
-  - ModuleNotFoundError: Module not found: Error: Can't resolve './assets/js/app.js' in 'D:\Work\git\Calculator\resources\html'
-  
-  - Compilation.js:1773 
-    [Calculator]/[webpack]/lib/Compilation.js:1773:28
-  
-  - NormalModuleFactory.js:814 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:814:13
-  
-  
-  - NormalModuleFactory.js:286 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:286:22
-  
-  
-  - NormalModuleFactory.js:442 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:442:22
-  
-  - NormalModuleFactory.js:124 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:124:11
-  
-  - NormalModuleFactory.js:676 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:676:25
-  
-  - NormalModuleFactory.js:885 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:885:8
-  
-  - NormalModuleFactory.js:1005 
-    [Calculator]/[webpack]/lib/NormalModuleFactory.js:1005:5
-  
-  - child-compiler.js:131 
-    [Calculator]/[html-webpack-plugin]/lib/child-compiler.js:131:18
-  
-  - Compiler.js:548 
-    [Calculator]/[webpack]/lib/Compiler.js:548:11
-  
-  - Compiler.js:1118 
-    [Calculator]/[webpack]/lib/Compiler.js:1118:17
-  
-  
-  - task_queues:96 processTicksAndRejections
-    node:internal/process/task_queues:96:5
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <header>
+</header>
+    
+            <div class="calculator">
+                <div class="calculator-data">
+                    <div class="calculator-data__input">
+                        <p data-value="">Storage:</p>
+                        <input type="range" id="storage" step="1" min="0" max="1000">
+                    </div>
+                    <div class="calculator-data__input">
+                        <p data-value="">Transfer:</p>
+                        <input type="range" id="transfer" step="1" min="0" max="1000">
+                    </div>
+                </div>
+
+                <ul class="calculator-result">
+                    <li class="backblaze">
+                        <div class="left">
+                            <p class="name">backblaze</p>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress">
+
+                                </div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+
+                    </li>
+                    <li class="bunny">
+                        <div class="left">
+                            <p class="name">bunny</p>
+                            <div class="param">
+                                <label>
+                                    <p>HDD</p>
+                                    <input id="type-disk1" type="radio" name="type-disk" value="HDD" checked="">
+                                </label>
+                                <label>
+                                    <p>SSD</p>
+                                    <input id="type-disk2" type="radio" name="type-disk" value="SSD">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+
+
+                    </li>
+                    <li class="scaleway">
+                        <div class="left">
+                            <p class="name">scaleway</p>
+                            <div class="param">
+                                <label>
+                                    <p>Multi</p>
+                                    <input id="type-options1" type="radio" name="type-options" value="Multi" checked="">
+                                </label>
+                                <label>
+                                    <p>Single</p>
+                                    <input id="type-options2" type="radio" name="type-options" value="Single">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+                    </li>
+                    <li class="vultr">
+                        <div class="left">
+                            <p class="name">vultr</p>
+                        </div>
+                        <div class="right">
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                            <p class="price"></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+    <footer>
+</footer>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>
